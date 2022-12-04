@@ -109,7 +109,7 @@ app.post('/upload', upload.array('data', 2), async (req, res) => {
 
   } catch (error) {
     const htmlResponse = htmlFail.replace('###message###', error.message)
-    res.status(400).send(htmlFail)
+    res.status(400).send(htmlResponse)
   }
 
 })
