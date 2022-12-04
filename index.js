@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const multer = require('multer')
 const upload = multer({ dest: 'uploads/' })
-const port = 3000
+const port = process.env.port || 3000
 const { writeFileSync } = require("fs");
 const { PDFDocument } = require('pdf-lib')
 const fs = require('fs');
@@ -26,7 +26,7 @@ const htmlSuccess = `
             </div>
         </body>
         </html>`
-            
+
 
 
 const htmlFail = `
